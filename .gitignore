@@ -46,3 +46,4 @@ yarn-error.log*
 next-env.d.ts
 certs/
 >>>>>>> release/v1.0.0
+.next/
