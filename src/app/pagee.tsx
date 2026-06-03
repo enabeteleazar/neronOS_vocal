@@ -48,7 +48,7 @@ function Panel({
   className?: string
 }) {
   return (
-    <section className={}>
+    <section className="panel">
       <div className="panel-title">{title}</div>
       {children}
     </section>
@@ -122,7 +122,7 @@ export default function Home() {
         <Panel title="NAVIGATION" className="nav-panel">
           <div className="nav-list">
             {nav.map((item, i) => (
-              <div className={} key={item}>
+              <div className="item" key={item}>
                 <span>{['▣', '◈', '◎', '▤', '⌁', '◇', '◉', '⌂', '☰', '⬡', '⚙'][i]}</span>
                 {item}
               </div>
@@ -186,7 +186,7 @@ export default function Home() {
             ['18:00', 'Backup memory', 'Upcoming'],
           ].map(([t, n, s], i) => (
             <div className="timeline-row" key={n}>
-              <i className={} />
+              <i className="dot" />
               <strong>{t}</strong>
               <span>{n}</span>
               <em>{s}</em>
@@ -219,7 +219,7 @@ export default function Home() {
         <Panel title="ACTIVITY OVER TIME">
           <div className="bars">
             {Array.from({ length: 14 }).map((_, i) => (
-              <i key={i} style={{ height:  }} />
+              <i key={i} style={{ height: `${8 + i * 2}px` }} />
             ))}
           </div>
         </Panel>
